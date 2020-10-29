@@ -6,7 +6,6 @@ RUN set -xe && \
     mkdir -p /opt/smartdns && \
     mv ./smartdns/etc/smartdns ./smartdns/usr/sbin /opt/smartdns/ && \
     rm -rf smartdns*
-VOLUME ["/opt/smartdns/smartdns"]
 ENTRYPOINT ["/opt/smartdns/sbin/smartdns"]
 CMD ["-f", "-c", "/opt/smartdns/smartdns.conf"]
 
